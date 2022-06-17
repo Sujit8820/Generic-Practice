@@ -12,33 +12,19 @@ namespace Generic_Practice
             double[] doubleArray = { 1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9 };
             char[] charArray = {'a','b','c','d','e' };
 
-            Generic.toPrint(intArray);
-            Generic.toPrint(doubleArray);
-            Generic.toPrint(charArray);
+            Generic.toPrint<int>(intArray);
+            Generic.toPrint<double>(doubleArray);
+            Generic.toPrint<char>(charArray);
 ;        }
 
-        public static void toPrint(int [] inputArray)
+        public static void toPrint<T>(T [] inputArray)
         {
-            foreach(int element in inputArray)
+            foreach(T element in inputArray)
             {
                 Console.WriteLine(element);
             }
+            Console.WriteLine("==================================================================");
         }
 
-        public static void toPrint(double[] inputArray)
-        {
-            foreach (double element in inputArray)
-            {
-                Console.WriteLine(element);
-            }
-        }
-
-        public static void toPrint(char[] inputArray)
-        {
-            foreach (char element in inputArray)
-            {
-                Console.WriteLine(element);
-            }
-        }
     }
 }
